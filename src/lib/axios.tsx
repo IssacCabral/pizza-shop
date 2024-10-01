@@ -8,10 +8,10 @@ export const api = axios.create({
 
 // antes de todas as requisições do axios, essa função é executada,
 // caso a variável de ambiente abaixo seja true
-if (env.VITE_API_ENABLE_DELAY) {
-  api.interceptors.request.use(async (config) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+// if (env.VITE_API_ENABLE_DELAY) {
+//   api.interceptors.request.use(async (config) => {
+//     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    return config;
-  });
-}
+//     return config;
+//   });
+// }
