@@ -18,8 +18,6 @@ const orderStatusMap: Record<OrderStatus, string> = {
 };
 
 export function OrderStatus({ status }: OrderStatusProps) {
-  console.log("status:", status);
-
   return (
     <div className="flex items-center gap-2">
       {status === "pending" && (
