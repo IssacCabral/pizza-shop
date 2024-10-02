@@ -18,6 +18,8 @@ const orderStatusMap: Record<OrderStatus, string> = {
 };
 
 export function OrderStatus({ status }: OrderStatusProps) {
+  console.log("status:", status);
+
   return (
     <div className="flex items-center gap-2">
       {status === "pending" && (
@@ -32,7 +34,7 @@ export function OrderStatus({ status }: OrderStatusProps) {
         <span className="h-2 w-2 rounded-full bg-emerald-500" />
       )}
 
-      {["processing, delivering"].includes(status) && (
+      {["processing", "delivering"].includes(status) && (
         <span className="h-2 w-2 rounded-full bg-amber-500" />
       )}
 
